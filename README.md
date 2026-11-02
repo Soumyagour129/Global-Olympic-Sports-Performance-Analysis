@@ -1,69 +1,26 @@
-# Global Olympic Sports Performance Analysis
+# GLOBAL-OLYMPIC-SPORTS-PERFORMANCE-ANALYSIS
 
-An Interactive Data Analytics and Visualization Platform
+A Tableau and Flask project that analyses global Olympic sports performance through interactive visualizations and a structured Tableau Story. The project explores country-wise performance, medal achievements, athlete accomplishments and sports-related trends. The published Tableau Dashboard and Story are integrated into a Flask website, providing a single platform to explore the analysis.
 
-## 1. Project Overview
+The project is designed for three types of users:
 
-Global Olympic Sports Performance Analysis is a data analytics project focused on exploring Olympic sports performance, athlete achievements, and country-wise participation and medal statistics.
+- Sports Analyst: Explores country-wise Olympic performance, medal achievements and trends across sporting disciplines to understand global sports performance.
+- Sports Broadcaster: Uses visual insights about countries, athletes and sports to communicate Olympic achievements and highlight notable performances.
+- Sports Researcher: Examines patterns in Olympic participation and achievements to understand performance differences across countries and sporting events.
 
-The project uses Tableau Public to develop interactive visualizations that help users explore Olympic data and understand performance trends. A web application developed using Python Flask provides a centralized platform to access the Tableau Dashboard and Tableau Story.
+## Project links
 
-The primary objective is to transform Olympic data into meaningful insights through interactive visual analytics and an accessible web interface.
+|             |                                                                                                                                                                              |
+| ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Demo Link   |                                                                                                                                            |
+| GitHub Link |                                                                                                                                            |
+| Dashboard   | https://public.tableau.com/app/profile/soumya.gour8185/viz/smartbridge_project/Dashboard2?publish=yes                                      |
+| Story Link  | https://public.tableau.com/app/profile/soumya.gour8185/viz/smartbridge_project/Story1?publish=yes                                          |
 
-## 2. Project Objectives
-
-- Analyze Olympic performance across participating countries.
-- Explore medal distribution and country-wise achievements.
-- Examine performance across different sporting disciplines.
-- Understand athlete participation and achievements.
-- Identify patterns and trends in Olympic performance.
-- Present analytical findings through interactive Tableau visualizations.
-- Develop a web-based platform to make the analysis easily accessible.
-
-## 3. Data Visualization
-
-The project includes two primary Tableau visualizations.
-
-### Tableau Dashboard
-
-The interactive dashboard provides visual insights into Olympic sports performance and allows users to explore the available analytical information.
-
-Dashboard: https://public.tableau.com/app/profile/soumya.gour8185/viz/smartbridge_project/Dashboard2?publish=yes
-
-### Tableau Story
-
-The Tableau Story presents the analysis through a sequence of visualizations, providing a structured approach to understanding the findings.
-
-Story: https://public.tableau.com/app/profile/soumya.gour8185/viz/smartbridge_project/Story1?publish=yes
-
-## 4. Website Features
-
-- Home Page: Provides an introduction to the project, its objectives, and analytical focus.
-- Dashboard Page: Embeds the interactive Tableau dashboard.
-- Story Page: Embeds the Tableau Story to present the analysis in a narrative format.
-- Responsive Interface: Supports different screen sizes and devices.
-- Navigation: Provides easy access to all sections of the website.
-- Tableau Integration: Allows users to interact with published Tableau visualizations directly through the website.
-
-## 5. Technologies Used
-
-| Technology     | Description                      |
-| -------------- | -------------------------------- |
-| Python         | Backend programming language     |
-| Flask          | Web application framework        |
-| Tableau Public | Data visualization and analytics |
-| HTML5          | Website structure                |
-| CSS3           | Website styling and layout       |
-| JavaScript     | Frontend functionality           |
-| Gunicorn       | Production WSGI server           |
-| Git            | Version control                  |
-| GitHub         | Source code management           |
-| Render         | Cloud deployment platform        |
-
-## 6. Project Structure
+## Repository structure
 
 ```
-global-olympic-sports-performance/
+GLOBAL-OLYMPIC-SPORTS-PERFORMANCE-ANALYSIS/
 │
 ├── app.py
 ├── config.py
@@ -84,37 +41,71 @@ global-olympic-sports-performance/
         └── style.css
 ```
 
-## 7. Installation and Setup
+## Project Components
 
-Follow the steps below to run the application locally.
+| Part                   | What was built                                                                                                    | Where                     |
+| ---------------------- | ----------------------------------------------------------------------------------------------------------------- | ------------------------- |
+| 1. Project Planning    | Defined the objectives and analytical focus of Global Olympic Sports Performance Analysis.                        | Project documentation     |
+| 2. Data Visualization  | Developed interactive Tableau visualizations to explore Olympic performance and related insights.                 | Tableau Public            |
+| 3. Dashboard           | Created the Global Olympic Sports Performance Dashboard for exploring the published visual analytics.             | Tableau Public            |
+| 4. Story               | Created the Global Olympic Sports Performance Story to present the analysis through a sequence of visualizations. | Tableau Public            |
+| 5. Web Development     | Developed a Flask-based website with a landing page and dedicated dashboard and story pages.                      | `templates/`, `app.py`    |
+| 6. Tableau Integration | Embedded the published Tableau Dashboard and Story into the Flask website.                                        | `config.py`, `templates/` |
+| 7. Deployment          | Prepared the application for public deployment using Gunicorn and Render.                                         | `Procfile`, `render.yaml` |
 
-### Prerequisites
+## Published views on Tableau Public
 
-Ensure that the following software is installed:
+The project includes two published Tableau views:
 
-- Python 3.x
-- Git
-- A code editor such as Visual Studio Code
+- Dashboard: https://public.tableau.com/app/profile/soumya.gour8185/viz/smartbridge_project/Dashboard2?publish=yes
+- Story: https://public.tableau.com/app/profile/soumya.gour8185/viz/smartbridge_project/Story1?publish=yes
 
-### Step 1: Clone the Repository
+Both visualizations are embedded into the Flask application, allowing visitors to explore the dashboard and story without navigating away from the website.
+
+## Website features
+
+- Home Page: Introduces the project, its objectives and analytical focus.
+- Dashboard Page: Embeds the interactive Tableau dashboard.
+- Story Page: Embeds the published Tableau Story.
+- Navigation: Provides access to all three website sections.
+- Responsive Design: Supports different screen sizes and devices.
+- Tableau Integration: Loads published visualizations directly from Tableau Public.
+
+## Technologies used
+
+| Technology     | Purpose                                |
+| -------------- | -------------------------------------- |
+| Python         | Backend programming                    |
+| Flask          | Web application framework              |
+| Tableau Public | Data visualization and analysis        |
+| HTML5          | Website structure                      |
+| CSS3           | Website styling                        |
+| JavaScript     | Frontend interactions                  |
+| Gunicorn       | Production application server          |
+| Render         | Cloud deployment                       |
+| Git and GitHub | Version control and repository hosting |
+
+## Run the web app locally
+
+### 1. Clone the repository
 
 ```
 git clone https://github.com/Soumyagour129/Global-Olympic-Sports-Performance-Analysis.git
 ```
 
-### Step 2: Navigate to the Project Directory
+### 2. Navigate to the project directory
 
 ```
-cd global-olympic-sports-performance
+cd GLOBAL-OLYMPIC-SPORTS-PERFORMANCE-ANALYSIS
 ```
 
-### Step 3: Create a Virtual Environment
+### 3. Create a virtual environment
 
 ```
 python -m venv venv
 ```
 
-Activate the virtual environment.
+### 4. Activate the virtual environment
 
 Windows:
 
@@ -128,75 +119,75 @@ macOS/Linux:
 source venv/bin/activate
 ```
 
-### Step 4: Install Dependencies
+### 5. Install dependencies
 
 ```
 pip install -r requirements.txt
 ```
 
-### Step 5: Run the Application
+### 6. Run the Flask application
 
 ```
 python app.py
 ```
 
-### Step 6: Access the Website
+### 7. Open the website
 
-Open the following address in your browser:
+Visit:
 
 ```
 http://127.0.0.1:5000/
 ```
 
-## 8. Deployment
+## Deploy the application on Render
 
-The application can be deployed using Render.
-
-### Deployment Steps
-
-1. Upload the project to a GitHub repository.
+1. Push the project repository to GitHub.
 2. Log in to https://render.com
-3. Select New Web Service.
+3. Select New → Web Service.
 4. Connect the GitHub repository.
-5. Configure the deployment settings.
+5. Configure the deployment settings:
 
-| Configuration | Value                             |
+| Setting       | Value                             |
 | ------------- | --------------------------------- |
 | Runtime       | Python                            |
 | Build Command | `pip install -r requirements.txt` |
 | Start Command | `gunicorn app:app`                |
 
 6. Click Deploy Web Service.
-7. After successful deployment, Render generates a public URL for accessing the application.
+7. After successful deployment, Render will provide a public URL for the website.
 
-## 9. Expected Outcomes
+## Tableau integration notes
 
-- A comprehensive visual exploration of Olympic sports performance.
-- Improved understanding of country-wise and sport-wise performance.
-- Interactive access to Olympic data visualizations.
-- A structured presentation of analytical findings through Tableau Story.
-- Integration of data analytics and web development technologies.
-- A publicly accessible platform for presenting the project.
+The Flask application embeds the Tableau views using their published URLs.
 
-## 10. Future Enhancements
+For the embedded visualizations to work correctly:
 
-- Incorporate additional Olympic datasets and performance indicators.
-- Introduce advanced filtering and comparison capabilities.
-- Expand the range of interactive visualizations.
-- Include additional statistical analysis and insights.
-- Improve website functionality and user experience.
+- The Tableau workbook and views must be published to Tableau Public.
+- The published views must be publicly accessible.
+- The dashboard and story URLs must be correctly configured in `config.py`.
+- An active internet connection is required to load Tableau visualizations.
 
-## 11. Author
+## Future enhancements
+
+- Add more Olympic performance comparisons and analytical insights.
+- Introduce additional interactive visualizations.
+- Expand country-wise and sport-wise performance analysis.
+- Improve dashboard filtering and exploration capabilities.
+- Add more detailed analytical summaries to the website.
+
+## Author
 
 Soumya Gour
 
-Project Title: Global Olympic Sports Performance Analysis
+Project: Global Olympic Sports Performance Analysis
 
 Visualization Platform: Tableau Public
 
-Backend Framework: Python Flask
+Web Framework: Python Flask
 
-Project Links
+This project combines data visualization and web development to make global Olympic sports performance insights accessible through an interactive web platform.
 
-- Tableau Dashboard: [https://public.tableau.com/app/profile/soumya.gour8185/viz/smartbridge_project/Dashboard2?publish=yes](https://public.tableau.com/app/profile/soumya.gour8185/viz/smartbridge_project/Dashboard2?publish=yes)
-- Tableau Story: [https://public.tableau.com/app/profile/soumya.gour8185/viz/smartbridge_project/Story1?publish=yes](https://public.tableau.com/app/profile/soumya.gour8185/viz/smartbridge_project/Story1?publish=yes)
+Important: This README follows the structure and professional project-documentation style of your F1 reference. I have intentionally avoided inventing dataset row counts, season coverage, calculated fields, validation results or specific chart types because those details have not been verified from your Olympic workbook.
+
+- Tableau Dashboard: https://public.tableau.com/app/profile/soumya.gour8185/viz/smartbridge_project/Dashboard2?publish=yes
+- Tableau Story: https://public.tableau.com/app/profile/soumya.gour8185/viz/smartbridge_project/Story1?publish=yes
