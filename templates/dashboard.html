@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+{% block title %}Dashboard · {{ project.name }}{% endblock %}
+{% block content %}
+<section class="page-hero">
+  <div class="kicker">GLOBAL OLYMPIC SPORTS PERFORMANCE / 01</div>
+  <h1>EXPLORE THE<br><span class="accent">DASHBOARD.</span></h1>
+  <p>Interact with the published Tableau visualization. Use the controls and filters provided in the dashboard to explore its data.</p>
+  <div class="hero-caption"><i></i> TABLEAU PUBLIC · INTERACTIVE VISUALIZATION</div>
+</section>
+<section class="section dashboard-section">
+  <div class="dashboard-heading">
+    <div><div class="kicker">LIVE TABLEAU VIEW</div><h2>OLYMPIC PERFORMANCE ANALYSIS</h2></div>
+    <a class="btn outline small" href="{{ project.tableau_public_url }}" target="_blank" rel="noopener">Open on Tableau ↗</a>
+  </div>
+  <div class="tableau-wrap">
+    <iframe src="{{ project.tableau_url }}" title="Global Olympic Sports Performance Analysis Tableau Dashboard" loading="lazy" allowfullscreen></iframe>
+  </div>
+  <p class="hint">The dashboard is hosted on Tableau Public and requires an internet connection. If it does not appear, open it directly on Tableau using the link above.</p>
+</section>
+<section class="section next">
+  <div><div class="kicker">KEEP EXPLORING</div><h2>FOLLOW THE<br><span class="accent">DATA.</span></h2></div>
+  <a class="btn primary" href="{{ url_for('home') }}">Back to overview →</a>
+</section>
+{% endblock %}

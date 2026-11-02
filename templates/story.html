@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block title %}Tableau Story · {{ project.name }}{% endblock %}
+{% block content %}
+<section class="page-hero story-hero">
+  <div class="kicker">GLOBAL OLYMPIC SPORTS PERFORMANCE / TABLEAU STORY</div>
+  <h1>THE OLYMPIC<br><span class="accent">STORY.</span></h1>
+  <p>Explore the published Tableau Story for Global Olympic Sports Performance Analysis. Navigate through the story points and interact with the visualization directly below.</p>
+  <div class="actions">
+    <a class="btn primary" href="#tableau-story">View the story <span>↓</span></a>
+    <a class="btn outline" href="{{ project.tableau_story_url }}" target="_blank" rel="noopener">Open on Tableau <span>↗</span></a>
+  </div>
+  <div class="hero-caption"><i></i> TABLEAU PUBLIC · INTERACTIVE STORY</div>
+</section>
+<section class="section dashboard-section" id="tableau-story">
+  <div class="dashboard-heading">
+    <div><div class="kicker">PUBLISHED TABLEAU STORY</div><h2>GLOBAL OLYMPIC SPORTS PERFORMANCE ANALYSIS</h2></div>
+    <a class="btn outline small" href="{{ project.tableau_story_url }}" target="_blank" rel="noopener">Open full story ↗</a>
+  </div>
+  <div class="tableau-wrap">
+    <iframe src="{{ project.tableau_story_embed_url }}" title="Global Olympic Sports Performance Analysis Tableau Story" loading="lazy" allowfullscreen></iframe>
+  </div>
+  <p class="hint">This page embeds your actual Tableau Story1 view. If Tableau does not load inside the page, use the Open on Tableau link above. An internet connection is required.</p>
+</section>
+<section class="section next">
+  <div><div class="kicker">EXPLORE THE VISUALIZATION</div><h2>GO FROM STORY<br><span class="accent">TO DASHBOARD.</span></h2></div>
+  <a class="btn primary" href="{{ url_for('dashboard') }}">Open dashboard →</a>
+</section>
+{% endblock %}

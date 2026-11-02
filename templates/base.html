@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080e17">
+  <meta name="description" content="{{ project.description }}">
+  <title>{% block title %}{{ project.name }}{% endblock %}</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;600;700;800;900&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+<header class="header">
+  <a class="brand" href="{{ url_for('home') }}"><span class="brand-icon">◎</span><span>OLYMPIC <b>INTELLIGENCE</b></span></a>
+  <button class="menu" aria-label="Toggle navigation" onclick="document.querySelector('.nav').classList.toggle('show')">☰</button>
+  <nav class="nav">
+    <a href="{{ url_for('home') }}" class="{% if request.endpoint == 'home' %}active{% endif %}">Overview</a>
+    <a href="{{ url_for('dashboard') }}" class="{% if request.endpoint == 'dashboard' %}active{% endif %}">Dashboard</a>
+    <a href="{{ url_for('story') }}" class="{% if request.endpoint == 'story' %}active{% endif %}">Story</a>
+    <a href="{{ project.tableau_public_url }}" target="_blank" rel="noopener" class="nav-cta">Open Tableau ↗</a>
+  </nav>
+</header>
+<main>{% block content %}{% endblock %}</main>
+<footer class="footer">
+  <div class="brand"><span class="brand-icon">◎</span><span>OLYMPIC <b>INTELLIGENCE</b></span></div>
+  <p>Global Olympic Sports Performance Analysis</p>
+  <span>Data · Performance · Discovery</span>
+</footer>
+</body>
+</html>

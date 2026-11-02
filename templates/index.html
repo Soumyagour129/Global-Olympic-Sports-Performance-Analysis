@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+{% block content %}
+<section class="hero">
+  <div class="orb orb-a"></div><div class="orb orb-b"></div>
+  <div class="hero-content">
+    <div class="eyebrow"><span class="live-dot"></span> GLOBAL SPORTS ANALYTICS</div>
+    <h1>THE WORLD.<br>THE GAMES.<br><span class="accent">THE DATA.</span></h1>
+    <p>{{ project.description }}</p>
+    <div class="actions">
+      <a class="btn primary" href="{{ url_for('dashboard') }}">Explore dashboard <span>↗</span></a>
+      <a class="btn outline" href="{{ url_for('story') }}">Read the story <span>↗</span></a>
+    </div>
+    <div class="hero-caption"><i></i> GLOBAL OLYMPIC SPORTS PERFORMANCE ANALYSIS</div>
+  </div>
+  <div class="rings" aria-hidden="true">
+    <div class="ring r1"></div><div class="ring r2"></div><div class="ring r3"></div>
+    <div class="rings-label">EXCELLENCE<br>THROUGH DATA</div>
+  </div>
+</section>
+
+<section class="section" id="project">
+  <div class="kicker">01 / PROJECT OVERVIEW</div>
+  <div class="split">
+    <h2>MORE THAN<br><span class="accent">MEDALS.</span></h2>
+    <p>Olympic competition creates a rich picture of sporting achievement. This project uses data visualization to make that picture easier to explore, compare and understand. Navigate the published dashboard to investigate the dimensions and measures available in the analysis.</p>
+  </div>
+  <div class="focus-grid">
+    {% for number, title, description in project.focus_areas %}
+    <article class="focus-card">
+      <div class="card-top"><span>{{ number }} / INSIGHT</span><b>↗</b></div>
+      <div class="card-symbol">{{ ["◉","⌁","♜","◇"][loop.index0] }}</div>
+      <h3>{{ title }}</h3><p>{{ description }}</p>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section class="statement">
+  <div class="section statement-inner">
+    <div><div class="kicker">02 / THE EXPERIENCE</div><h2>TURNING<br>SPORTING DATA<br><span class="accent">INTO INSIGHT.</span></h2></div>
+    <div class="actions">
+      <a class="btn outline" href="{{ url_for('story') }}">Read the project story ↗</a>
+      <a class="btn primary" href="{{ url_for('dashboard') }}">Launch the dashboard ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="section tech">
+  <div class="kicker">03 / TECHNOLOGY STACK</div>
+  <h2>BUILT TO <span class="accent">EXPLORE.</span></h2>
+  <p class="muted">The project portal combines a lightweight web interface with Tableau's interactive visualization experience.</p>
+  <div class="tech-tags">{% for item in project.technology %}<span>{{ item }}</span>{% endfor %}</div>
+</section>
+{% endblock %}
