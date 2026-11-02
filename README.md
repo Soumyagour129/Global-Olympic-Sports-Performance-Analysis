@@ -12,7 +12,7 @@ The project is designed for three types of users:
 
 |             |                                                                                                                                                                              |
 | ----------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Demo Link   |                                                                                                                                            |
+| Demo Link   |  https://drive.google.com/file/d/1A4Ew_tG_LI6hgBGwZXlZkrINMqqUESwt/view?usp=sharing                                                                                                                                          |
 | GitHub Link |                                                                                                                                            |
 | Dashboard   | https://public.tableau.com/app/profile/soumya.gour8185/viz/smartbridge_project/Dashboard2?publish=yes                                      |
 | Story Link  | https://public.tableau.com/app/profile/soumya.gour8185/viz/smartbridge_project/Story1?publish=yes                                          |
