@@ -156,6 +156,12 @@ http://127.0.0.1:5000/
 6. Click Deploy Web Service.
 7. After successful deployment, Render will provide a public URL for the website.
 
+## Run the web app
+
+Open https://global-olympic-sports-performance-2he8.onrender.com
+
+The embedded views load from Tableau Public, so the computer needs internet access and the workbook must be public (not hidden) on the Tableau Public profile.
+
 ## Tableau integration notes
 
 The Flask application embeds the Tableau views using their published URLs.
